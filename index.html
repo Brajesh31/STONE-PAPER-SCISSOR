@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stone Paper Scissor Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Select any one</h1>
+
+  <button onclick="
+    getComputerChoise();
+    result('rock', computerChoise);
+    "><img src="images/Rock.png" alt="ROCK"></button>
+
+  <button onclick="
+      getComputerChoise();
+      result('paper', computerChoise);
+    "><img src="images/Paper.png" alt="PAPER"></button>
+
+  <button onclick="
+      getComputerChoise();
+      result('scissor', computerChoise);
+    "><img src="images/Scissor.png" alt="SCISSOR"></button>
+
+
+  <h2 id="computerChoise"></h2>
+  <h2 id="playerChoise"></h2>
+  <h2 id="result"></h2>
+  <h2 id="Score"></h2>
+
+  <button class="reset" onclick="localStorage.clear()
+       winLooseTie = {
+           win: 0,
+           loose: 0,
+           tie: 0,
+          }
+          document.querySelector('#computerChoise').innerHTML=``;
+          document.querySelector('#playerChoise').innerHTML=``;
+          document.querySelector('#result').innerHTML=`` 
+          document.querySelector('#Score').innerHTML=`Score: win=0, loose=0, tie=0`; 
+    ">Reset</button>
+
+
+  <script src=" index.js"></script>
+</body>
+
+</html>
